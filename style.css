@@ -1,37 +1,112 @@
-html {
-  height: 100%;
-  width: 100%;
-  font-family: "Titillium Web", sans-serif;
-}
-
+/* General page styling */
 body {
-  min-height: 100%;
-  min-width: 100%;
-  background: linear-gradient(blue, grey);
-}
-
-button {
-  font-size: 7px;
-}
-
-#main-content {
-  position: relative;
+  font-family: Arial, sans-serif;
+  background-color: #1f501e;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 15px 20px 18px 18px;
-  border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+  min-height: 100vh;
 }
 
-#list {
-  margin: 12px;
-  border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.75);
-  padding: 25px 20px 18px 18px;
-  border-radius: 15px;
-  box-shadow: 2px 5px 5px #333;
+/* Container styling */
+.container {
+  background-color: #99ad99;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+/* Task form styling */
+.task-form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;  /* Adds space between form elements */
+}
+
+.task-form input, .task-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box; /* Makes the input size consistent */
+}
+
+/* Buttons styling */
+.task-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.task-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Cancel edit button */
+#editCancelBtn {
+  background-color: #dc3545;
+}
+
+#editCancelBtn:hover {
+  background-color: #c82333;
+}
+/* Sort options styling */
+.sort-options {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.sort-options label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.sort-options select {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+/* Task list styling */
+.task-lists {
+  text-align: left;
+}
+
+.task-lists ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-lists ul li {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .container {
+      padding: 15px;
+  }
+  .task-form {
+      gap: 5px;
+  }
+  .task-lists ul li {
+      flex-direction: column;
+      align-items: flex-start;
+  }
 }
